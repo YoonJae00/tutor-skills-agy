@@ -4,12 +4,17 @@ set -e
 SKILLS=("tutor-setup" "tutor")
 
 for skill in "${SKILLS[@]}"; do
-  SKILL_DIR="$HOME/.claude/skills/$skill"
+  # Uninstall from Claude Code
+  CLAUDE_DIR="$HOME/.claude/skills/$skill"
+  if [ -d "$CLAUDE_DIR" ]; then
+    rm -rf "$CLAUDE_DIR"
+    echo "Removed $skill from Claude Code ($CLAUDE_DIR)"
+  fi
 
-  if [ -d "$SKILL_DIR" ]; then
-    rm -rf "$SKILL_DIR"
-    echo "Removed $skill from $SKILL_DIR"
-  else
-    echo "$skill not found at $SKILL_DIR (skipping)"
+  # Uninstall from Antigravity CLI (agy)
+  AGY_DIR="$HOME/.gemini/antigravity-cli/skills/$skill"
+  if [ -d "$AGY_DIR" ]; then
+    rm -rf "$AGY_DIR"
+    echo "Removed $skill from Antigravity CLI ($AGY_DIR)"
   fi
 done

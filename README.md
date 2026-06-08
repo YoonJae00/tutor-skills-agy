@@ -2,9 +2,10 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-skill-blue)](https://docs.anthropic.com/en/docs/claude-code)
+[![Antigravity CLI](https://img.shields.io/badge/Antigravity_CLI-skill-orange)](#)
 [![Install with npx skills](https://img.shields.io/badge/npx_skills-add-green)](https://github.com/vercel-labs/skills)
 
-Two [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skills that turn any knowledge source into an **Obsidian StudyVault** and then quiz you on it — closing the loop from content to comprehension.
+Two Agentic Skills for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Antigravity CLI (agy)](#) that turn any knowledge source into an **Obsidian StudyVault** and then quiz you on it — closing the loop from content to comprehension.
 
 ## How It Works
 
@@ -29,7 +30,7 @@ Two [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skills that tu
 
 ## Quick Start
 
-### One-line install (recommended)
+### One-line install (Claude Code)
 
 ```bash
 npx skills add RoundTable02/tutor-skills
@@ -37,7 +38,7 @@ npx skills add RoundTable02/tutor-skills
 
 > Requires [npx skills](https://github.com/vercel-labs/skills) — works with Claude Code, Cursor, Windsurf, and more.
 
-### Manual install
+### Manual install (Recommended for Antigravity CLI & Claude Code)
 
 ```bash
 git clone https://github.com/RoundTable02/tutor-skills.git
@@ -47,18 +48,33 @@ cd tutor-skills
 
 ### Step 1: Generate a StudyVault
 
-```bash
-cd ~/study-materials/          # or any source code project
-claude
-> /tutor-setup
-```
+* **In Claude Code**:
+  ```bash
+  cd ~/study-materials/          # or any source code project
+  claude
+  > /tutor-setup
+  ```
+
+* **In Antigravity CLI (agy)**:
+  ```bash
+  cd ~/study-materials/          # or any source code project
+  agy
+  > /tutor-setup
+  ```
 
 ### Step 2: Start Quizzing
 
-```bash
-claude
-> /tutor
-```
+* **In Claude Code**:
+  ```bash
+  claude
+  > /tutor
+  ```
+
+* **In Antigravity CLI (agy)**:
+  ```bash
+  agy
+  > /tutor
+  ```
 
 ---
 
@@ -217,7 +233,7 @@ Concept-level tracking stores attempts, correct count, last tested date, and err
 
 ## Requirements
 
-- [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) installed and configured
+- [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) or [Antigravity CLI (agy)](#) installed and configured
 - [Obsidian](https://obsidian.md/) (recommended) to open and navigate the generated vault
 
 ## Repository Structure
@@ -252,8 +268,13 @@ tutor-skill/
 Or manually:
 
 ```bash
+# For Claude Code:
 rm -rf ~/.claude/skills/tutor-setup
 rm -rf ~/.claude/skills/tutor
+
+# For Antigravity CLI (agy):
+rm -rf ~/.gemini/antigravity-cli/skills/tutor-setup
+rm -rf ~/.gemini/antigravity-cli/skills/tutor
 ```
 
 ## License
