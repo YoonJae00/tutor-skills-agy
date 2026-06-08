@@ -7,6 +7,8 @@
 
 Two Agentic Skills for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [Antigravity CLI (agy)](#) that turn any knowledge source into an **Obsidian StudyVault** and then quiz you on it — closing the loop from content to comprehension.
 
+[한국어 문서 (Korean)](README_KR.md)
+
 ## How It Works
 
 ```
@@ -33,7 +35,7 @@ Two Agentic Skills for [Claude Code](https://docs.anthropic.com/en/docs/claude-c
 ### One-line install (Claude Code)
 
 ```bash
-npx skills add RoundTable02/tutor-skills
+npx skills add YoonJae00/tutor-skills-agy
 ```
 
 > Requires [npx skills](https://github.com/vercel-labs/skills) — works with Claude Code, Cursor, Windsurf, and more.
@@ -41,8 +43,8 @@ npx skills add RoundTable02/tutor-skills
 ### Manual install (Recommended for Antigravity CLI & Claude Code)
 
 ```bash
-git clone https://github.com/RoundTable02/tutor-skills.git
-cd tutor-skills
+git clone https://github.com/YoonJae00/tutor-skills-agy.git
+cd tutor-skills-agy
 ./install.sh
 ```
 

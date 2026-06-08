@@ -7,6 +7,8 @@
 
 텍스트 문서나 소스 코드를 분석하여 **Obsidian StudyVault(학습 공간)**를 생성하고, 이를 바탕으로 맞춤형 퀴즈 피드백을 제공하는 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 및 [Antigravity CLI (agy)](#) 전용 에이전트 스킬 세트입니다. 정보 추출부터 최종 학습 완성까지 유기적인 흐름을 지원합니다.
 
+[English Document (영어)](README.md)
+
 ## 작동 방식
 
 ```
@@ -32,7 +34,7 @@
 ### 한 줄 설치 (Claude Code 전용)
 
 ```bash
-npx skills add RoundTable02/tutor-skills
+npx skills add YoonJae00/tutor-skills-agy
 ```
 
 > [npx skills](https://github.com/vercel-labs/skills)가 필요합니다. Claude Code, Cursor, Windsurf 등 다양한 도구에서 연동 가능합니다.
@@ -40,8 +42,8 @@ npx skills add RoundTable02/tutor-skills
 ### 수동 설치 (Antigravity CLI 및 Claude Code 모두 권장)
 
 ```bash
-git clone https://github.com/RoundTable02/tutor-skills.git
-cd tutor-skills
+git clone https://github.com/YoonJae00/tutor-skills-agy.git
+cd tutor-skills-agy
 ./install.sh
 ```
 
