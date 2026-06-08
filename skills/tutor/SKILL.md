@@ -59,16 +59,24 @@ Present these as an AskUserQuestion (or ask_question) with header "Session" and 
 
 1. Read markdown files in target section(s)
 2. If drilling weak area: also read `concepts/{area}.md` to find 🔴 unresolved concepts — rephrase these in new contexts (don't repeat the same question)
-3. Craft exactly 4 questions following `references/quiz-rules.md`
+3. Build questions targeting either all of the unresolved/tested concepts in the area, or a representative set of concepts (typically 4-8 questions) depending on the session goals. Capping at 4 is no longer required; instead, favor comprehensive coverage of the concepts so that the user's weak points are systematically discovered and tested. The questions can be a mix of multiple-choice (객관식) and descriptive (서술형/주관식) formats based on the user's exam prep preferences.
 
 **CRITICAL**: Read `references/quiz-rules.md` before crafting ANY question. Zero hints allowed.
 
 ### Phase 4: Present Quiz
 
-Use AskUserQuestion (or ask_question in Antigravity CLI / agy):
-- 4 questions, 4 options each, single-select
-- Header: "Q1. Topic" (max 12 chars)
-- Descriptions: neutral, no hints
+Present all questions (both multiple-choice and descriptive) together in a single AskUserQuestion (or ask_question in Antigravity CLI / agy) call to ensure the user can solve all questions in a single continuous flow before grading.
+
+For multiple-choice (객관식) questions:
+- Provide 4 options, single-select.
+- Header: "Q[N]. Topic" (max 12 chars).
+
+For descriptive (서술형/주관식) questions:
+- Provide the following exact options:
+  1. `[기타] 입력란에 주관식/서술형 답안을 작성하여 제출하겠습니다.`
+  2. `잘 모르겠습니다. (패스)`
+- In the question text/description, explicitly guide the user: "이 문제는 서술형입니다. 첫 번째 항목을 선택한 뒤, 아래에 활성화되는 [기타/주관식] 입력창에 답안을 서술하여 적어주세요."
+- Header: "Q[N]. Topic" (max 12 chars).
 
 ### Phase 5: Grade & Explain
 

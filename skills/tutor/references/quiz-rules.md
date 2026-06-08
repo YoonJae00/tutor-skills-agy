@@ -39,10 +39,19 @@ When targeting 🔴 concepts from concept files:
 - Test the same underlying knowledge from a different angle
 - E.g., if user confused "400 vs 422", ask a scenario question where they must choose the correct status code for a new situation
 
-## AskUserQuestion Format
+## Question Presentation Format
 
-- 4 questions per round, 4 options each, single-select
-- Header: max 12 chars, "Q1. Topic"
+All questions (both multiple-choice and descriptive) must be bundled and presented together in a single AskUserQuestion (or ask_question) call.
+
+1. **Multiple-Choice (객관식)**:
+   - Provide 4 options, single-select.
+   - Header: max 12 chars, "Q[N]. Topic".
+2. **Descriptive (서술형/주관식)**:
+   - Provide predefined options:
+     1. `[기타] 입력란에 주관식/서술형 답안을 작성하여 제출하겠습니다.`
+     2. `잘 모르겠습니다. (패스)`
+   - In the question description, instruct the user to select the first option and write their detailed answer in the popup's write-in (Other/기타) text input field.
+   - Header: max 12 chars, "Q[N]. Topic".
 
 ## File Update Protocol
 
